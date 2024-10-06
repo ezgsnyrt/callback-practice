@@ -25,7 +25,8 @@ const fetchDataById = (id) => {
     .then(data => {
         // console.log("Data received: ", data);
         const person = data;
-        console.log(`Person (ID: ${id}): ${person}`);
+        // const person = data.name;
+        console.log(`Person (ID: ${id}): ${JSON.stringify(person)}`);
     })
     .catch((error) => {
         console.log("There was a prombem while fetching data", error);
