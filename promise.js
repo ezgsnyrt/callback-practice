@@ -17,18 +17,18 @@ const fetchDataById = (id) => {
         // console.log(response);
 
         if(!response.ok) {
-            throw new Error("There is an error in the network response.")
+            throw new Error("Network response was not ok.")
         } else {
             return response.json();
         }
     })
     .then(data => {
-        // console.log(data);
-        const person = data.name;
+        // console.log("Data received: ", data);
+        const person = data;
         console.log(`Person (ID: ${id}): ${person}`);
     })
     .catch((error) => {
-        console.log("Error fetching a character", error);
+        console.log("There was a prombem while fetching data", error);
     })
 }
 
