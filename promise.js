@@ -1,9 +1,9 @@
 // Create promise
-let mypromise = new Promise((resolve, reject) => {
+let myPromise = new Promise((resolve, reject) => {
     resolve("Success");
 });
 
-mypromise.then((message) => {
+myPromise.then((message) => {
     console.log(message);
 });
 
@@ -29,10 +29,8 @@ const fetchDataById = (id) => {
         console.log(`Person (ID: ${id}): ${JSON.stringify(person)}`);
     })
     .catch((error) => {
-        console.log("There was a prombem while fetching data", error);
+        console.log("There was a problem while fetching data", error);
     })
 }
 
 fetchDataById(12);
-
-
